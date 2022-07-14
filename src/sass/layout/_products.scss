@@ -1,0 +1,38 @@
+.container {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+  background-color: bisque;
+}
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+.products__item {
+  width: 100%;
+  text-align: center;
+  border-radius: 24px;
+  border: transparent;
+  background-color: teal;
+}
+.products__label {
+  display: block;
+  text-align: center;
+}
+.products__title {
+  display: block;
+  text-align: center;
+}
+.products__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.products__item__title {
+}
+.products__item__text {
+}
