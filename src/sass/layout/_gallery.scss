@@ -1,0 +1,64 @@
+.gallery__list {
+  display: inline-grid;
+  gap: 2.5px;
+  grid-template-areas:
+    '. . grid-4 grid-4 . . .'
+    '. . grid-4 grid-4 . grid-7 .'
+    '. grid-2 grid-4 grid-4 . grid-7 .'
+    '. grid-2 grid-4 grid-4 grid-6 grid-7 .'
+    'grid-1 grid-2 grid-4 grid-4 grid-6 grid-7 grid-10'
+    'grid-1 grid-2 grid-4 grid-4 grid-6 grid-7 grid-10'
+    'grid-1 grid-2 grid-4 grid-4 grid-6 grid-9 grid-10'
+    'grid-1 grid-3 grid-4 grid-4 grid-6 grid-9 grid-10'
+    'grid-1 grid-3 grid-4 grid-4 grid-8 grid-9 grid-10'
+    '. grid-3 grid-4 grid-4 grid-8 grid-9 grid-10'
+    '. grid-3 grid-5 . grid-8 grid-9 .'
+    '. grid-3 grid-5 . grid-8 grid-9 .'
+    '. grid-3 grid-5 . grid-8 . . '
+    '. . grid-5 . grid-8 . .'
+    '. . grid-5 . . . .';
+
+  background: linear-gradient(to top, #ffff 8.5%, #fff5f6);
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gallery__item--1 {
+  grid-area: grid-1;
+}
+.gallery__item--2 {
+  grid-area: grid-2;
+}
+.gallery__item--3 {
+  grid-area: grid-3;
+}
+
+.gallery__item--4 {
+  grid-area: grid-4;
+}
+.gallery__item--5 {
+  grid-area: grid-5;
+}
+.gallery__item--6 {
+  grid-area: grid-6;
+}
+
+.gallery__item--7 {
+  grid-area: grid-7;
+}
+
+.gallery__item--8 {
+  grid-area: grid-8;
+}
+.gallery__item--9 {
+  grid-area: grid-9;
+}
+.gallery__item--10 {
+  grid-area: grid-10;
+}
+
+.gallery__image {
+  display: block;
+}
