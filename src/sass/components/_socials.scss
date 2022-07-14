@@ -1,0 +1,9 @@
+.social__list {
+  @include flex-centred();
+}
+
+.social__item {
+  .social__item + & {
+    margin-left: 28px;
+  }
+}
