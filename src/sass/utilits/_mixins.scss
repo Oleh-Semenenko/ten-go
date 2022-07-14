@@ -1,0 +1,34 @@
+// DISPLAY
+@mixin flex-centred($d: flex, $ai: center, $jc: center) {
+  display: $d;
+  align-items: $ai;
+  justify-content: $jc;
+}
+
+// POSITION
+@mixin position($pos: absolute, $t: 0, $l: 0) {
+  position: $pos;
+  top: $t;
+  left: $l;
+}
+
+// BUTTON
+@mixin btn-white($bg: #ffffff, $col: #d41443, $fill: #d41443) {
+  background-color: $bg;
+  color: $col;
+  fill: $fill;
+}
+
+@mixin btn-purp($bg: #d41443, $col: #ffffff, $fill: #ffffff) {
+  background-color: $bg;
+  color: $col;
+  fill: $fill;
+}
+
+// FONT
+@mixin font($fw, $fs, $lh, $ls) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
