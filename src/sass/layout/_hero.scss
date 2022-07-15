@@ -1,0 +1,72 @@
+.hero {
+    padding-top: 194px;
+    padding-bottom: 158px;
+    width: 100%;
+    background-color: #FFB8CA;
+    min-height: 502px;
+    overflow: hidden;
+}
+
+.hero__title {
+    margin-bottom: 20px;
+    font-family: 'Titan One';
+    @include font (400, 26px, 1.15, 0.04em);
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.hero__title--accent {
+    font-size: 48px;
+    line-height: 0.965;
+    color: var(--accent-color);
+}
+
+.hero__text {
+    position: absolute;
+    top: 194px;
+    left: 20px;
+    z-index: 3;
+    max-width: 218px;
+}
+
+.hero__btns {
+    display: flex;
+}
+
+.hero__link {
+    display: block;
+    padding: 9px 14px;
+    border-radius: 20px;
+    font-size: 8px;
+    line-height: 1.25;
+}
+
+.hero__link--about {
+    display: inline-block;
+    @include btn-white;
+}
+
+.hero__link--products {
+    @include btn-purp;
+    margin-right: 8px;
+}
+
+.ice-cream {
+    z-index: 2;
+    width: 171px;
+    height: 410px;
+    position: absolute;
+    top: 92px;
+    left: 117px;
+}
+
+.circle {
+    max-width:346px;
+    position: absolute;
+    top: 83px;
+    left: 36px;
+    z-index: 1;
+    display: block;
+    width: 346;
+    height: 344;
+}
