@@ -31,14 +31,15 @@
     color: var(--primary-text-color);
     text-align: center;
     max-width: 180px;
-    padding: 13px 8px 8px 13px;
+    padding: 0 8px 8px 13px;
+    margin-top: 13px;
     
     background-image: repeating-linear-gradient(
         to bottom,
-        #E1E1E1 74px,
-        #E1E1E1 75px,
-        transparent 75px,
-        transparent 105px);
+        transparent 0,
+        transparent 30px,
+        #E1E1E1 30px,
+        #E1E1E1 31px);
 }
 
 .reviews__name {
