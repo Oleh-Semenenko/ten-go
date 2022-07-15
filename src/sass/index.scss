@@ -1,4 +1,19 @@
 @import './common';
+@import './base/reset';
+
+@import './utilits/vars';
+@import './utilits/hidden';
+@import './utilits/mixins';
+
+@import './components/button';
+@import './components/container';
+@import './components/mobile-menu';
+@import './components/modal';
+@import './components/section';
+@import './components/socials';
+@import './components/title';
+@import './components/top-text';
+
 @import './layout/header';
 @import './layout/hero';
 @import './layout/products';
