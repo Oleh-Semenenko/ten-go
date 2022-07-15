@@ -93,11 +93,10 @@
   text-transform: uppercase;
   color: #ffffff;
   margin-top: 160px;
-  margin-bottom: 70px;
+  margin-bottom: 32px;
 }
 
 .products__text {
-  margin-bottom: 114px;
   padding-left: 40px;
   padding-right: 40px;
   font-family: 'DM Sans';
@@ -107,4 +106,27 @@
   text-align: center;
   letter-spacing: 0.04em;
   color: #ffffff;
+  margin-bottom: 32px;
+}
+
+.products__link {
+  margin-bottom: 40px;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.products__link-icon {
+  fill: #d41443;
+}
+
+.products__icon {
+  margin-bottom: 32px;
 }
