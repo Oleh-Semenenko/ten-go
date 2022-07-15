@@ -1,0 +1,61 @@
+.list {
+  list-style: none;
+}
+.products__container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.products__label {
+  font-family: 'Titan One';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.17;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffa5ba;
+  text-align: center;
+}
+.products__title {
+  font-family: 'Titan One';
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #d41443;
+
+  text-align: center;
+}
+.products__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.products__item {
+  text-align: center;
+  width: 280px;
+  background: #ffb8ca;
+  border-radius: 24px;
+}
+.products__item__title {
+  font-family: 'Titan One';
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.products__item__text {
+  padding-left: 40px;
+  padding-right: 40px;
+  font-family: 'DM Sans';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
