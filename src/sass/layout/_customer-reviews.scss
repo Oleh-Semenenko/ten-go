@@ -1,0 +1,70 @@
+
+.reviews__item {
+    width: 280px;
+}
+
+.reviews__img {
+    width: 85px;
+    height: 85px;
+    margin: 0 auto 32px;
+}
+
+.reviews-wrap {
+    background-color: #FAFAFA;
+    width: 100%;
+    padding: 30px 50px 17px;
+    margin-bottom: 16px;
+    
+    &::before {
+        content: '';
+        display: block;
+        background-image: url(/src/images/gallery/mobile/commas.png);
+        width: 54px;
+        height: 40px;
+        position: absolute;
+    }
+}
+
+.reviews__text {
+    position: relative;
+    @include font (500, 12px, 2.55, 0);
+    color: var(--primary-text-color);
+    text-align: center;
+    max-width: 180px;
+    padding: 0 8px 8px 13px;
+    margin-top: 13px;
+    
+    background-image: repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 30px,
+        #E1E1E1 30px,
+        #E1E1E1 31px);
+}
+
+.reviews__name {
+    @include font(500, 14px, 1.86, 0.02em);
+    text-align: center;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+.dot-first::before,
+.dot-second::before,
+.dot-third::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 4px;
+    background-color: #C7133E;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.dot-third::before {
+    margin-right: 0px;
+}
+
