@@ -25,7 +25,7 @@
     margin-bottom: 20px;
   }
 }
-.contacts-list__item-category {
+.category {
   color: #ffffff;
   font-weight: 500;
   font-size: 12px;
@@ -36,7 +36,7 @@
   text-align: center;
   letter-spacing: 0.04em;
 }
-.contacts-list__item-cafe {
+.cafe {
   background: #f0d1a5;
   border-radius: 4px;
   padding-left: 25px;
@@ -51,7 +51,7 @@
   margin-bottom: 20px;
 }
 
-.contacts-list__item-foodtruck {
+.foodtruck {
   background: #c2e297;
   border-radius: 4px;
 
@@ -67,10 +67,10 @@
   margin-bottom: 20px;
 }
 
-.contacts-list__item-location {
+.location {
   margin-bottom: 24px;
 }
-.contacts-list__item-description-1 {
+.location-description--1 {
   color: #000;
   font-weight: 500;
   font-size: 12px;
@@ -78,7 +78,7 @@
   letter-spacing: 0.04em;
   margin-bottom: 8px;
 }
-.contacts-list__item-description-2 {
+.location-description--2 {
   color: #907e82;
   font-weight: 500;
   font-size: 12px;
@@ -88,20 +88,20 @@
   padding-bottom: 24px;
 }
 
-.contacts-list__item-schedule-list {
+.schedule-list {
   margin-bottom: 24px;
   padding-bottom: 24px;
 
   border-bottom: 1px solid #e1e1e1;
 }
-.contacts-list__item-schedule-day {
+.schedule-day {
   color: #000000;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.5;
 }
 
-.contacts-list__item-schedule-time {
+.schedule-time {
   font-weight: 500;
   font-size: 12px;
   line-height: 1.5;
@@ -110,7 +110,7 @@
   color: #ffa5ba;
 }
 
-.contact-list__item-link {
+.address-link {
   font-weight: 500;
   font-size: 12px;
   line-height: 1.5;
@@ -133,18 +133,18 @@
   cursor: pointer;
 }
 
-.contacts-list-btn {
+.contacts-btn {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.contacts-list-btn__item {
+.contacts-btn__item {
   margin-bottom: 10px;
 }
 
-.contacts-list-btn__item-locations {
+.btn-locations {
   background: #d41342;
   border-radius: 22px;
 
@@ -163,7 +163,7 @@
   height: 44px;
 }
 
-.contacts-list-btn__location-icon {
+.btn__location-icon {
   width: 8px;
   height: 10px;
   margin-left: 8px;
@@ -171,7 +171,7 @@
   align-items: center;
   justify-content: center;
 }
-.contacts-list-btn__item-franchise {
+.btn-franchise {
   background: #ffffff;
   border-radius: 22px;
   font-size: 16px;
@@ -198,7 +198,7 @@
   }
 }
 
-.contacts-list-btn__franchise-icon {
+.btn__franchise-icon {
   width: 8px;
   height: 10px;
   margin-left: 8px;
@@ -207,10 +207,10 @@
   justify-content: center;
 }
 
-.contacts-list-btn__location-icon {
+.btn__location-icon {
   stroke: #ffffff;
 }
 
-.contacts-list-btn__franchise-icon {
+.btn__franchise-icon {
   stroke: #d41443;
 }
