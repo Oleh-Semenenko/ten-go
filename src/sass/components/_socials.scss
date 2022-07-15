@@ -7,3 +7,13 @@
     margin-left: 28px;
   }
 }
+
+.social__link {
+  @include flex-centred();
+
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+
+  background-color: var(--socials-bg-color);
+}
