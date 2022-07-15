@@ -1,12 +1,11 @@
-.list {
-  list-style: none;
-}
 .products__container {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
 .products__label {
+  margin-bottom: 15px;
+
   font-family: 'Titan One';
   font-weight: 400;
   font-size: 18px;
@@ -17,6 +16,8 @@
   text-align: center;
 }
 .products__top-title {
+  margin-bottom: 148px;
+
   font-family: 'Titan One';
   font-weight: 400;
   font-size: 34px;
@@ -31,13 +32,58 @@
 .products__list {
   display: flex;
   flex-wrap: wrap;
+  gap: 140px;
+}
+.icecream {
+  background-color: #ffb8ca;
+}
+
+.coffee {
+  background-color: #f0d1a5;
+}
+
+.milkshake {
+  background-color: #c2e297;
 }
 .products__item {
+  position: relative;
   text-align: center;
   width: 280px;
-  background: #ffb8ca;
   border-radius: 24px;
 }
+
+.icecream::before {
+  content: '';
+  display: block;
+  background-image: url(../images/gallery/mobile/products-1-mob.png);
+  width: 280px;
+  height: 280px;
+  background-position: center;
+  position: absolute;
+  top: -28%;
+}
+
+.coffee::before {
+  content: '';
+  display: block;
+  background-image: url(../images/gallery/mobile/products-2-mob.png);
+  width: 280px;
+  height: 280px;
+  background-position: center;
+  position: absolute;
+  top: -28%;
+}
+.milkshake::before {
+  content: '';
+  display: block;
+  background-image: url(../images/gallery/mobile/products-3-mob.png);
+  width: 280px;
+  height: 280px;
+  background-position: center;
+  position: absolute;
+  top: -28%;
+}
+
 .products__title {
   font-family: 'Titan One';
   font-size: 20px;
@@ -46,9 +92,12 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #ffffff;
+  margin-top: 160px;
+  margin-bottom: 70px;
 }
 
 .products__text {
+  margin-bottom: 114px;
   padding-left: 40px;
   padding-right: 40px;
   font-family: 'DM Sans';
