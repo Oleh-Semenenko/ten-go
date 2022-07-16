@@ -5,11 +5,18 @@
                 <use href="./images/sprite/icons.svg#icon-logo"></use>
             </svg>
         </a>
-        <button type="button" class="menu-open__btn" data-menu-open>
-            <svg class="menu-open__icon" width="20" height="12">
-                <use href="/src/images/sprite/icons.svg#icon-Burger-1"></use>
-            </svg>
-        </button>
+        <div class="header__wrap">
+            <button type="button" class="menu-open__btn" data-menu-open>
+                <svg class="menu-open__icon" width="20" height="12">
+                    <use href="/src/images/sprite/icons.svg#icon-Burger-1"></use>
+                </svg>
+            </button>
+            <button type="button" class="header__btn">Buy now
+                <svg class="btn__icon" width="6" height="8">
+                    <use href="./images/sprite/icons.svg#icon-button"></use>
+                </svg>
+            </button>
+        </div>
     </div>
     <section class="mob-menu is-hidden" data-menu>
         <div class="container">
@@ -25,11 +32,11 @@
             </button>
         </div>
         <ul class="mob-menu__list">
-            <li class="mob-menu__item"><a href="#" class="mob-menu__link">Home</a></li>
-            <li class="mob-menu__item"><a href="#" class="mob-menu__link">About us</a></li>
-            <li class="mob-menu__item"><a href="#" class="mob-menu__link">How it’s made?</a></li>
+            <li class="mob-menu__item"><a href="#" class="mob-menu__link current">Home</a></li>
+            <li class="mob-menu__item"><a href="#about" class="mob-menu__link">About us</a></li>
+            <li class="mob-menu__item"><a href="#advantages" class="mob-menu__link">How it’s made?</a></li>
             <li class="mob-menu__item"><a href="#" class="mob-menu__link">Our products</a></li>
-            <li class="mob-menu__item"><a href="#" class="mob-menu__link">Contact</a></li>
+            <li class="mob-menu__item"><a href="#contact" class="mob-menu__link">Contact</a></li>
         </ul>
     </section>
 </header>
