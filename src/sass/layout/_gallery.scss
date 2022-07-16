@@ -1,3 +1,9 @@
+.gallery {
+  background: linear-gradient(to bottom,
+        var(--purple-section-color) 16.5%,
+        var(--white-section-color) 16.5%);
+}
+
 .gallery__list {
   display: inline-grid;
   gap: 2.5px;
@@ -18,11 +24,7 @@
     '. . grid-5 . grid-8 . .'
     '. . grid-5 . . . .';
 
-  background: linear-gradient(
-    to top,
-    var(--white-section-color) 8.5%,
-    var(--purple-section-color)
-  );
+  
 }
 
 .gallery__item--1 {
