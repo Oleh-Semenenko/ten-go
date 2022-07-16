@@ -1,7 +1,9 @@
 .gallery {
-  background: linear-gradient(to bottom,
-        var(--purple-section-color) 16.5%,
-        var(--white-section-color) 16.5%);
+  background: linear-gradient(
+    to bottom,
+    var(--purple-section-color) 16.5%,
+    var(--white-section-color) 16.5%
+  );
 }
 
 .gallery__list {
@@ -23,8 +25,6 @@
     '. grid-3 grid-5 . grid-8 . . '
     '. . grid-5 . grid-8 . .'
     '. . grid-5 . . . .';
-
-  
 }
 
 .gallery__item--1 {
@@ -59,4 +59,8 @@
 }
 .gallery__item--10 {
   grid-area: grid-10;
+}
+
+.gallery .container {
+  padding: 0;
 }
