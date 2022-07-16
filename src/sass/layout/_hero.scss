@@ -1,10 +1,11 @@
 .hero {
-    padding-top: 194px;
-    padding-bottom: 158px;
-    width: 100%;
     background-color: #FFB8CA;
-    min-height: 502px;
     overflow: hidden;
+    .container {
+        padding-top: 194px;
+        padding-bottom: 157px;
+        position: relative;
+    }
 }
 
 .hero__title {
@@ -22,10 +23,8 @@
 }
 
 .hero__text {
-    position: absolute;
-    top: 194px;
-    left: 20px;
-    z-index: 3;
+    position: relative;
+    z-index: 2;
     max-width: 218px;
 }
 
@@ -35,7 +34,7 @@
 
 .hero__link {
     display: block;
-    padding: 9px 14px;
+    padding: 7px 14px;
     border-radius: 20px;
     font-size: 8px;
     line-height: 1.25;
@@ -51,22 +50,20 @@
     margin-right: 8px;
 }
 
-.ice-cream {
-    z-index: 2;
-    width: 171px;
-    height: 410px;
-    position: absolute;
-    top: 92px;
-    left: 117px;
-}
-
-.circle {
-    max-width:346px;
+.cirle {
     position: absolute;
     top: 83px;
     left: 36px;
-    z-index: 1;
-    display: block;
-    width: 346;
-    height: 344;
+    width: 346px;                                
+    height: 344px;
+    background-color: #FFA5BA;
+    border-radius: 50%;
+}
+
+.ice-cream {
+    position: absolute;
+    width: 171px;
+    height: 410px;
+    top: 9px;
+    left: 81px;
 }
