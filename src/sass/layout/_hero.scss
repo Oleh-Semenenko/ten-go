@@ -147,6 +147,14 @@
     }
 }
 
+.hero_left-info {
+    display: none;
+    @media screen and (min-width: 768px) {
+        display: block;
+    }
+
+}
+
 .hero-left-info__number {
     font-family: 'Titan One';
     @include font (400, 28px, 1.14, 0.04em);
@@ -179,10 +187,14 @@
 }
 
 .hero__girl {
+    display: none;
+    @media screen and (min-width: 768px) {
+    display: block;
     width: 190px;
     height: 150px;
     position: absolute;
     bottom: 0;
     right: 32px;
     z-index: 3;
+    }
 }
