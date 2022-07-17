@@ -1,0 +1,33 @@
+.social__list {
+  @include flex-centred();
+}
+
+.social__item {
+  .social__item + & {
+    margin-left: 28px;
+  }
+}
+
+.social__link {
+  @include flex-centred();
+
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+
+  background-color: var(--socials-bg-color);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    transition: var(--transition);
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+  }
+}
+.social__icon {
+  fill: var(--socials-icon-color);
+}
