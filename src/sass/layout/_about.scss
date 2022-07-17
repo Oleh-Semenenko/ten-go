@@ -159,6 +159,7 @@
     color:var(--accent-color);
     fill: var(--accent-color);
     stroke: var(--accent-color);
+    transition: var(--transition);
     &:hover,
     &:focus {
     background: var(--accent-color);
@@ -200,7 +201,7 @@
     border-radius: 10px;
     background-color: #ffffff;
     padding: 30px;
-    transition: transform 550ms ease-in-out, scale 550ms ease-in-out;
+    transition: var(--transition);
     background-color:var(--purple-section-color);
     overflow: auto;
     @media screen and (min-width: 768px) {
@@ -215,20 +216,11 @@
     }
 }
 
-.about__form {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    height: 80%;
-    width: 90%;
-}
-
 .close {
     border: 1px solid var(--accent-color);
     fill: var(--accent-color);
     background-color: var(--purple-section-color);
+    transition: var(--transition);
 &:focus,
 &:hover {
     fill:var(--button-accent-bg);
@@ -245,7 +237,8 @@
     margin-top: auto;
     margin-bottom: auto;
     position: relative;
-    text-align: center;
+    text-align: justify;
+
     @media screen and (min-width: 768px) {
         @include font(500, 14px, 1.76, 00.04em);
         width: 100%;
