@@ -1,20 +1,24 @@
 .header {
-    background-color: #FFB8CA;
-    position: fixed;
-    top: 0;
-    left: 0;
+    // background-color: #FFB8CA;
+    @include position (fixed, 0, 0);
     z-index: 4;
     width: 100%;
     padding-top: 8px;
     padding-bottom: 8px;
-    & > .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+
+    &>.container {
+        @include flex-centred (flex, center, space-between);
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 32px;
+        padding-bottom: 0;
     }
 }
 
 .menu-open__icon {
+    width: 20px;
+    height: 12px;
     fill: var(--accent-color);
 }
 
@@ -24,19 +28,53 @@
     padding: 0;
 }
 
+.header__wrap {
+    display: flex;
+}
+
+.header__btn {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: block;
+        margin-left: 32px;
+        border: none;
+        padding: 12px 37px;
+        border-radius: 22px;
+        border: none;
+        @include btn-white;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.31;
+
+        .btn__icon {
+            margin-left: 12px;
+        }
+    }
+}
+
 .mob-menu {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 5;
-    background-color: #E17992;
+    background-color: var(--mob-menu-bg);
     width: 100vw;
     height: 100vh;
-    padding-top: 20px;
+    padding-top: 63px;
     padding-bottom: 20px;
+
+    @media screen and (min-width: 768px) {
+        width: 33vw;
+        height: 100vh;
+        box-shadow: -9px 0px 37px -7px rgba(0, 0, 0, 0.75);
+    }
 }
 
 .menu-close__btn {
+    position: absolute;
+    top: 26px;
+    right: 20px;
     display: block;
     margin-left: auto;
     padding: 0;
@@ -61,13 +99,34 @@
 
 .btn__icon {
     margin-left: 27px;
+    stroke: var(--accent-color);
+    width: 8px;
+    height: 10px;
+        
+    align-items: center;
+    justify-content: center;
+}
+
+.mob-btn__icon {
+    margin-left: 27px;
+    stroke: var(--accent-color);
+    fill: var(--accent-color);
+    width: 8px;
+    height: 10px;
+        
+    align-items: center;
+    justify-content: center;
 }
 
 .mob-menu__link {
-    color: #fff;
+    color: var(--white-section-color);
     font-weight: 700;
     font-size: 14px;
     line-height: 1.29;
+}
+
+.current {
+    color: var(--accent-color);
 }
 
 .mob-menu__item {

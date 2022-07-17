@@ -1,3 +1,11 @@
+.gallery {
+  background: linear-gradient(
+    to bottom,
+    var(--purple-section-color) 16.5%,
+    var(--white-section-color) 16.5%
+  );
+}
+
 .gallery__list {
   display: inline-grid;
   gap: 2.5px;
@@ -17,12 +25,6 @@
     '. grid-3 grid-5 . grid-8 . . '
     '. . grid-5 . grid-8 . .'
     '. . grid-5 . . . .';
-
-  background: linear-gradient(to top, #ffff 8.5%, #fff5f6);
-
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .gallery__item--1 {
@@ -59,6 +61,6 @@
   grid-area: grid-10;
 }
 
-.gallery__image {
-  display: block;
+.gallery .container {
+  padding: 0;
 }
