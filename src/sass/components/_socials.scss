@@ -6,6 +6,12 @@
   .social__item + & {
     margin-left: 28px;
   }
+
+  @media screen and (min-width: 768px) {
+    .social__item + & {
+      margin-left: 30px;
+    }
+  }
 }
 
 .social__link {
@@ -16,4 +22,9 @@
   border-radius: 50%;
 
   background-color: var(--socials-bg-color);
+
+  @media screen and (min-width: 768px) {
+    width: 34px;
+    height: 34px;
+  }
 }

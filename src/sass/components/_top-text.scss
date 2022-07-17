@@ -1,10 +1,16 @@
 .title__top-text {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 
   font-family: 'Titan One';
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.1666;
+  @include font(400, 18px, 1.1666, 00.04em);
   text-align: center;
   text-transform: uppercase;
+
+  @include tablet {
+    @include font(null, 26px, 1.1538, null);
+  }
+
+  @include desktop {
+    @include font(null, 30px, 1.1333, null);
+  }
 }
