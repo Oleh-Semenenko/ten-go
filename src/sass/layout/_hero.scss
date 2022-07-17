@@ -128,11 +128,19 @@
 }
 
 .hero-text-link {
-    display: inline-block;
+    display: block;
     background-color: #fff;
     border-radius: 50%;
     width: 18px;
     height: 18px;
+    fill: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text__arrow {
+    width: 8px;
     fill: var(--accent-color);
 }
 
@@ -198,3 +206,4 @@
     z-index: 3;
     }
 }
+

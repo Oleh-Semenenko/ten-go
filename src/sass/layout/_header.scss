@@ -99,6 +99,22 @@
 
 .btn__icon {
     margin-left: 27px;
+    stroke: var(--accent-color);
+    width: 8px;
+    height: 10px;
+        
+    align-items: center;
+    justify-content: center;
+}
+
+.mob-btn__icon {
+    margin-left: 27px;
+    stroke: var(--accent-color);
+    width: 8px;
+    height: 10px;
+        
+    align-items: center;
+    justify-content: center;
 }
 
 .mob-menu__link {
