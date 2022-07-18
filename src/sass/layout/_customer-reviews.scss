@@ -1,12 +1,20 @@
 
 .reviews__item {
     width: 280px;
+
+    @media screen and (min-width: 768px) {
+        width: 620px;
+    }
 }
 
 .reviews__img {
     width: 85px;
     height: 85px;
     margin: 0 auto 32px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 20px;
+    }
 }
 
 .reviews-wrap {
@@ -14,6 +22,12 @@
     width: 100%;
     padding: 30px 50px 17px;
     margin-bottom: 16px;
+
+    @media screen and (min-width: 768px) {
+        width: 620px;
+        padding: 20px 6px 36px;
+        margin: 0 auto 2px;
+    }
     
     &::before {
         content: '';
@@ -22,17 +36,29 @@
         width: 54px;
         height: 40px;
         position: absolute;
+        @media screen and (min-width: 768px) {
+            width: 60px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
     }
 }
 
 .reviews__text {
     position: relative;
-    @include font (500, 12px, 2.55, 0);
+    @include font (500, 12px, 2.55, 0.02em);
     color: var(--primary-text-color);
     text-align: center;
     max-width: 180px;
-    padding: 0 8px 8px 13px;
+    padding: 0 8px 9px 15px;
     margin-top: 13px;
+
+    @media screen and (min-width: 768px) {
+        max-width: 608px;
+        @include font (500, 14px, 2.16, 0.04em);
+        padding: 0 45px 8px 50px;
+        margin-top: 17px;
+    }
     
     background-image: repeating-linear-gradient(
         to bottom,
@@ -43,9 +69,15 @@
 }
 
 .reviews__name {
+    color: var(--primary-text-color);
     @include font(500, 14px, 1.86, 0.02em);
     text-align: center;
     margin-bottom: 16px;
+
+    @media screen and (min-width: 768px) {
+        @include font (500, 16px, 1.86, 0.04em);
+        margin-bottom: 32px;
+    }
 }
 
 .dots {
