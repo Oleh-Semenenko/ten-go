@@ -2,8 +2,12 @@
 .reviews__item {
     width: 280px;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
         width: 620px;
+    }
+
+    @include desktop {
+        width: 968px;
     }
 }
 
@@ -12,8 +16,11 @@
     height: 85px;
     margin: 0 auto 32px;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
         margin-bottom: 20px;
+    }
+    @include desktop {
+        margin-bottom: 16px;
     }
 }
 
@@ -23,10 +30,13 @@
     padding: 30px 50px 17px;
     margin-bottom: 16px;
 
-    @media screen and (min-width: 768px) {
-        width: 620px;
+    @include tablet {
         padding: 20px 6px 36px;
         margin: 0 auto 2px;
+    }
+    @include desktop {
+        padding: 32px 74px 31px 72px;
+        margin: 0 auto 16px;
     }
     
     &::before {
@@ -36,10 +46,13 @@
         width: 54px;
         height: 40px;
         position: absolute;
-        @media screen and (min-width: 768px) {
+        @include tablet {
             width: 60px;
             background-repeat: no-repeat;
             background-position: center;
+        }
+        @include desktop {
+            width: 54px;
         }
     }
 }
@@ -53,11 +66,17 @@
     padding: 0 8px 9px 15px;
     margin-top: 13px;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
         max-width: 608px;
         @include font (500, 14px, 2.16, 0.04em);
         padding: 0 45px 8px 50px;
         margin-top: 17px;
+    }
+    @include desktop {
+        max-width: 822px;
+        @include font (500, 16px, 1.86, 0.04em);
+        padding: 0 35px 8px 36px;
+        margin-top: 15px;
     }
     
     background-image: repeating-linear-gradient(
@@ -74,9 +93,12 @@
     text-align: center;
     margin-bottom: 16px;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
         @include font (500, 16px, 1.86, 0.04em);
         margin-bottom: 32px;
+    }
+    @include desktop {
+        @include font (500, 20px, 1.86, 0.04em);
     }
 }
 
