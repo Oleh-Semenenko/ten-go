@@ -13,6 +13,11 @@
             display: flex;
             justify-content: space-between;
         }
+        @media screen and (min-width: 1200px) {
+            max-width: 1200px;
+            padding-top: 147px;
+            padding-bottom: 60px;
+        }
     }
 }
 
@@ -27,6 +32,12 @@
         font-size: 22px;
         line-height: 1.136;
     }
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 24px;
+        font-size: 38px;
+        line-height: 1.158;
+        }
 }
 
 .hero__title--accent {
@@ -37,6 +48,9 @@
     @media screen and (min-width: 768px) {
         font-size: 34px;
         line-height: 0.905;
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 58px;
     }
 }
 
@@ -49,6 +63,9 @@
         position: unset;
         max-width: 162px;
     }
+    @media screen and (min-width: 1200px) {
+        max-width: 277px;
+    }
 }
 
 .hero__btns {
@@ -56,6 +73,9 @@
 
     @media screen and (min-width: 768px) {
         margin-bottom: 20px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 40px;
     }
 }
 
@@ -65,16 +85,35 @@
     border-radius: 20px;
     font-size: 8px;
     line-height: 1.25;
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.29;
+        padding: 11px 23px;
+        }
 }
 
 .hero__link--about {
     display: inline-block;
     @include btn-white;
+    &:hover,
+    &:focus {
+        background-color: var(--button-accent-bg);
+        color: var(--accent-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        }
 }
 
 .hero__link--products {
     @include btn-purp;
     margin-right: 8px;
+    transform: scale(1);
+    &:hover,
+    &:focus {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        transform: scale(1.11);}
+    @media screen and (min-width: 1200px) {
+    margin-right: 12px;
+    }
 }
 
 .cirle {
@@ -92,6 +131,13 @@
         width: 335px;
         height: 333px;
     }
+    
+    @media screen and (min-width: 1200px) {
+       left: 517px;
+       top: 54px;
+       width: 534px;
+       height: 534px;
+    }
 }
 
 .ice-cream {
@@ -101,8 +147,15 @@
 
     @media screen and (min-width: 768px) {
         top: 37px;
+        left: 74px;
         width: 145px;
         height: 338px;
+    }
+    @media screen and (min-width: 1200px) {
+        top: 54px;
+        left: 119px;
+        width: 236px;
+        height: 557px;
     }
 }
 
@@ -114,6 +167,10 @@
         width: 152px;
         height: 154px;
     }
+    @media screen and (min-width: 1200px) {
+        width: 213px;
+        height: 216px;
+    }
 }
 
 .hero__info {
@@ -124,6 +181,12 @@
         color: var(--white-section-color);
         width: 114px;
         margin-bottom: 7px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 1.4;
+        width: 200px;
     }
 }
 
@@ -137,6 +200,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media screen and (min-width: 1200px) {
+    width: 26px;
+    height: 26px;
+    }
 }
 
 .hero-text__arrow {
@@ -168,12 +235,20 @@
     @include font (400, 28px, 1.14, 0.04em);
     text-transform: uppercase;
     color: var(--accent-color);
+    @media screen and (min-width: 1200px) {
+    font-size: 46px;
+    line-height: 1.15;
+    }
 }
 
 .hero-left-info__text {
     font-size: 8px;
     line-height: 1.25;
     color: var(--white-section-color);
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.29;
+    }
 }
 
 .hero-left-info__item {
@@ -192,6 +267,10 @@
     top: 0;
     right: 0;
     z-index: -1;
+    @media screen and (min-width: 1200px) {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 .hero__girl {
@@ -204,6 +283,11 @@
     bottom: 0;
     right: 32px;
     z-index: 3;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 304px;
+        height: 241px;
+        right: 16px;
     }
 }
 

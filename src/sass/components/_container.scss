@@ -2,17 +2,21 @@
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
+  width: 100%;
 
-  @media screen and (min-width: 320px) {
+  @include mobile {
     max-width: 320px;
   }
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     max-width: 768px;
     padding-left: 16px;
     padding-right: 16px;
   }
 
-
-
+  @include desktop {
+    max-width: 1200px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
