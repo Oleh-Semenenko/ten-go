@@ -11,7 +11,7 @@
     text-align: left;
     color: var(--title-color);
   }
-  @media screen and (min-width: 768px) {
+  @include tablet {
     max-width: 340px;
     @include font(null, 26px, null, null);
     &--bold {
@@ -19,7 +19,7 @@
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     max-width: 1400px;
     @include font(null, 30px, null, null);
     &--bold {
@@ -29,7 +29,7 @@
   }
 }
 .title-wrap {
-  @media screen and (min-width: 768px) {
+  @include tablet {
     max-width: 1199px;
     @include flex-centred($d: flex, $ai: center, $jc: space-between);
   }
@@ -39,7 +39,7 @@
 .footer-social__list {
   justify-content: end;
   margin-top: 40px;
-  @media screen and (min-width: 768px) {
+  @include tablet {
     margin-top: 0;
   }
 }
@@ -55,10 +55,10 @@
   &--black {
     color: #000000;
   }
-  @media screen and (min-width: 768px) {
+  @include tablet {
     @include font(700, 14px, 1.85, null);
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     @include font(700, 16px, 1.88, null);
   }
 }
@@ -83,7 +83,7 @@
   @include font(700, 14px, 1.52, null);
   text-align: center;
   color: var(--link-color);
-  @media screen and (min-width: 768px) {
+  @include tablet {
     width: auto;
     padding-bottom: 6px;
   }
