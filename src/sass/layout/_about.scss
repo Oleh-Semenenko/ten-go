@@ -5,11 +5,18 @@
 .about {
     background: var(--purple-section-color);
     padding-bottom: 0px;
+    background-image: url(../images/gallery/web/about-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 585px;
+    @media screen and (min-width: 768px) {
+    background-image: none;
+    }
 
     @media screen and (min-width: 1200px) {
-        background-image: url(../images/gallery/web/about-bg.png);
-        background-repeat: no-repeat;
-        background-position: bottom;
+    background-image: url(../images/gallery/web/about-bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
     }
 }
 
@@ -20,7 +27,7 @@
     margin-bottom: 40px;
 
     @media screen and (min-width: 1200px) {
-        margin-bottom: 20px;
+    margin-bottom: 20px;
     }
 }
 
@@ -63,20 +70,20 @@
 .about__group {
     @media screen and (min-width: 768px) {
         display: flex;
-        margin-left: 32px;
-        margin-right: 32px;
+        // margin-left: 32px;
+        // margin-right: 32px;
     }
 
 }
 
 .about__images {
-    max-width: 336px;
+    
     width: 100%;
     margin-right: 32px;
     justify-content: center;
 
     @media screen and (min-width: 1200px) {
-        max-width: 500px;
+       
         margin-right: 100px;
     }
 }
@@ -84,7 +91,7 @@
 .about__text {
     margin-right: auto;
     width: 100%;
-    max-width: 336px;
+    
 
     @media screen and (min-width: 1200px) {
         max-width: 100%;
@@ -92,27 +99,14 @@
     }
 }
 
-.about__milk__img {
-    margin-top: -25%;
-    width: 100%;
-    margin-bottom: -35%;
-    display: inline;
-
-    @media screen and (min-width: 768px) {
-        display: none;
-    }
-
-
-}
 
 .about__data {
     font-family: 'DM Sans';
     @include font(500, 12px, 1.62, null);
     color: var(--primary-text-color);
     margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 80px;
-    max-width: 220px;
+    margin-bottom: 40px;
+
     position: relative;
 
     @media screen and (min-width: 768px) {
@@ -136,8 +130,7 @@
     color: var(--secondary-text-color);
     margin-top: auto;
     margin-bottom: 20px;
-    margin-right: 80px;
-    max-width: 220px;
+
     position: relative;
 
     @media screen and (min-width: 768px) {
@@ -253,7 +246,7 @@
     margin-bottom: auto;
     position: relative;
     text-align: justify;
-
+   
     @media screen and (min-width: 768px) {
         @include font(500, 14px, 1.76, 00.04em);
         width: 100%;
