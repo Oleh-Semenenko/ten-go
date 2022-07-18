@@ -1,8 +1,18 @@
+.reviews {
+    margin: 0 auto;
+    width: 280;
+
+    @include tablet {
+        width: 620px;
+    }
+
+    @include desktop {
+        width: 968px;
+    }
+}
 
 .reviews__item {
-    // text-align: center;
     width: 280px;
-    // margin: 0 auto;
 
     @include tablet {
         width: 620px;
@@ -57,16 +67,7 @@
         }
     }
 }
-.reviews {
-    margin: 0 auto;
-    @include tablet {
-        width: 620px;
-    }
-    
-    @include desktop {
-        width: 968px;
-    }
-}
+
 .reviews__text {
     position: relative;
     @include font (500, 12px, 2.55, 0.02em);
