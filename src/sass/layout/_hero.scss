@@ -7,14 +7,13 @@
         padding-bottom: 157px;
         position: relative;
 
-        @media screen and (min-width: 768px) {
+        @include tablet {
             padding-top: 102px;
             padding-bottom: 16px;
             display: flex;
             justify-content: space-between;
         }
-        @media screen and (min-width: 1200px) {
-            max-width: 1200px;
+        @include desktop {
             padding-top: 147px;
             padding-bottom: 60px;
         }
@@ -28,12 +27,12 @@
     text-transform: uppercase;
     color: var(--white-section-color);
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
         font-size: 22px;
         line-height: 1.136;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
         margin-bottom: 24px;
         font-size: 38px;
         line-height: 1.158;
@@ -45,11 +44,11 @@
     line-height: 0.965;
     color: var(--accent-color);
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
         font-size: 34px;
         line-height: 0.905;
     }
-    @media screen and (min-width: 1200px) {
+    @include desktop {
         font-size: 58px;
     }
 }
@@ -59,11 +58,11 @@
     z-index: 2;
     max-width: 218px;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
         position: unset;
         max-width: 162px;
     }
-    @media screen and (min-width: 1200px) {
+    @include desktop {
         max-width: 277px;
     }
 }
@@ -71,10 +70,10 @@
 .hero__btns {
     display: flex;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
         margin-bottom: 20px;
     }
-    @media screen and (min-width: 1200px) {
+    @include desktop {
         margin-bottom: 40px;
     }
 }
@@ -85,7 +84,7 @@
     border-radius: 20px;
     font-size: 8px;
     line-height: 1.25;
-    @media screen and (min-width: 1200px) {
+    @include desktop {
         font-size: 14px;
         line-height: 1.29;
         padding: 11px 23px;
@@ -125,14 +124,14 @@
     background-color: #FFA5BA;
     border-radius: 50%;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
         left: 248px;
         top: 43px;
         width: 335px;
         height: 333px;
     }
     
-    @media screen and (min-width: 1200px) {
+    @include desktop {
        left: 517px;
        top: 54px;
        width: 534px;
@@ -145,36 +144,38 @@
     width: 171px;
     height: 410px;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
         top: 37px;
         left: 74px;
         width: 145px;
         height: 338px;
     }
-    @media screen and (min-width: 1200px) {
-        top: 54px;
+        @include desktop {
+        top: 58px;
         left: 119px;
-        width: 236px;
-        height: 557px;
+        width: 238px;
+        height: 559px;
     }
 }
 
 .hero-milk-tab {
     display: none;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
         display: block;
         width: 152px;
         height: 154px;
+        max-width: 152px;
     }
-    @media screen and (min-width: 1200px) {
+    @include desktop {
         width: 213px;
         height: 216px;
+        max-width: 213px;
     }
 }
 
 .hero__info {
-    @media screen and (min-width: 768px) {
+    @include tablet {
         display: block;
         font-size: 8px;
         line-height: 1.5;
@@ -182,7 +183,7 @@
         width: 114px;
         margin-bottom: 7px;
     }
-    @media screen and (min-width: 1200px) {
+        @include desktop {
         margin-bottom: 20px;
         font-size: 14px;
         line-height: 1.4;
@@ -200,7 +201,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    @media screen and (min-width: 1200px) {
+    @include desktop {
     width: 26px;
     height: 26px;
     }
@@ -214,7 +215,7 @@
 .hero-tab-text {
     display: none;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
         position: relative;
         z-index: 2;
         display: flex;
@@ -224,8 +225,9 @@
 
 .hero_left-info {
     display: none;
-    @media screen and (min-width: 768px) {
+    @include tablet {
         display: block;
+        margin-left: auto;
     }
 
 }
@@ -235,7 +237,7 @@
     @include font (400, 28px, 1.14, 0.04em);
     text-transform: uppercase;
     color: var(--accent-color);
-    @media screen and (min-width: 1200px) {
+    @include desktop {
     font-size: 46px;
     line-height: 1.15;
     }
@@ -245,7 +247,7 @@
     font-size: 8px;
     line-height: 1.25;
     color: var(--white-section-color);
-    @media screen and (min-width: 1200px) {
+    @include desktop {
         font-size: 14px;
         line-height: 1.29;
     }
@@ -267,7 +269,7 @@
     top: 0;
     right: 0;
     z-index: -1;
-    @media screen and (min-width: 1200px) {
+    @include desktop {
         width: 30px;
         height: 30px;
     }
@@ -275,7 +277,7 @@
 
 .hero__girl {
     display: none;
-    @media screen and (min-width: 768px) {
+    @include tablet {
     display: block;
     width: 190px;
     height: 150px;
@@ -284,7 +286,7 @@
     right: 32px;
     z-index: 3;
     }
-    @media screen and (min-width: 1200px) {
+    @include desktop {
         width: 304px;
         height: 241px;
         right: 16px;
