@@ -1,9 +1,20 @@
 .button {
   transform: translate(0) scale(1);
   @include flex-centred();
+  border: none;
 
   transition: background-color var(--transition), box-shadow var(--transition),
     transform var(--transition);
+
+  &--white {
+    color: var(--accent-color);
+    background-color: var(--white-button-bg);
+  }
+
+  &--purp {
+    color: var(--white-text-color);
+    background-color: var(--purp-button-bg);
+  }
 
   &--white:hover,
   &--white:focus {
