@@ -3,13 +3,14 @@
 }
 
 .about {
-    background: var(--purple-section-color);   
+    background: var(--purple-section-color);
     padding-bottom: 0px;
+
     @media screen and (min-width: 1200px) {
-            background-image: url(../images/gallery/web/about-bg.png);
-            background-repeat: no-repeat;
-            background-position: bottom;
-        }
+        background-image: url(../images/gallery/web/about-bg.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
 }
 
 .about__coa__img {
@@ -17,8 +18,9 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 40px;
+
     @media screen and (min-width: 1200px) {
-    margin-bottom: 20px;
+        margin-bottom: 20px;
     }
 }
 
@@ -30,9 +32,11 @@
     color: var(--title-top-text-color);
     margin-top: auto;
     margin-bottom: 15px;
+
     @media screen and (min-width: 768px) {
         @include font(400, 26px, 1.15, mull);
     }
+
     @media screen and (min-width: 1200px) {
         @include font(400, 30px, 1.13, 00.04em);
     }
@@ -46,9 +50,11 @@
     margin-top: auto;
     color: var(--title-color);
     margin-bottom: 32px;
+
     @media screen and (min-width: 768px) {
         @include font(400, 48px, 1.15, 00.04em);
     }
+
     @media screen and (min-width: 1200px) {
         @include font(400, 58px, 1.14, 00.06em);
     }
@@ -56,11 +62,11 @@
 
 .about__group {
     @media screen and (min-width: 768px) {
-    display: flex;
-    margin-left: 32px;
-    margin-right: 32px;
+        display: flex;
+        margin-left: 32px;
+        margin-right: 32px;
     }
-   
+
 }
 
 .about__images {
@@ -68,18 +74,21 @@
     width: 100%;
     margin-right: 32px;
     justify-content: center;
+
     @media screen and (min-width: 1200px) {
-    max-width: 500px;
-    margin-right: 100px;
+        max-width: 500px;
+        margin-right: 100px;
+    }
 }
-}
+
 .about__text {
     margin-right: auto;
     width: 100%;
     max-width: 336px;
+
     @media screen and (min-width: 1200px) {
-    max-width: 100%;
-    
+        max-width: 100%;
+
     }
 }
 
@@ -88,11 +97,12 @@
     width: 100%;
     margin-bottom: -35%;
     display: inline;
+
     @media screen and (min-width: 768px) {
-    display: none;
+        display: none;
     }
-   
-    
+
+
 }
 
 .about__data {
@@ -104,17 +114,18 @@
     margin-right: 80px;
     max-width: 220px;
     position: relative;
-    // z-index: 2;
+
     @media screen and (min-width: 768px) {
         @include font(500, 14px, 1.76, null);
         width: 100%;
         max-width: 100%;
-        margin-right: 0px;  
-        margin-bottom: 40px;     
+        margin-right: 0px;
+        margin-bottom: 40px;
     }
+
     @media screen and (min-width: 1200px) {
-        @include font(500, 16px, 1.76, 00.04em);  
-        margin-top: 90px;      
+        @include font(500, 16px, 1.76, 00.04em);
+        margin-top: 90px;
     }
 }
 
@@ -122,24 +133,24 @@
 .about__details {
     font-family: 'DM Sans';
     @include font(500, 12px, 1.62, null);
-    color:var(--secondary-text-color);
+    color: var(--secondary-text-color);
     margin-top: auto;
     margin-bottom: 20px;
     margin-right: 80px;
     max-width: 220px;
     position: relative;
-    // z-index: 2;
+
     @media screen and (min-width: 768px) {
         @include font(500, 14px, 1.76, 00.04em);
         width: 100%;
         max-width: 100%;
         margin-right: 0px;
-        }
-    
+    }
+
     @media screen and (min-width: 1200px) {
         @include font(500, 14px, 1.94, 00.04em);
         margin-bottom: 40px;
-    
+
     }
 }
 
@@ -156,19 +167,20 @@
     @include font(700, 14px, 1.3, null);
     align-items: center;
     text-align: center;
-    color:var(--accent-color);
+    color: var(--accent-color);
     fill: var(--accent-color);
     stroke: var(--accent-color);
     transition: var(--transition);
+
     &:hover,
     &:focus {
-    background: var(--accent-color);
-    border: var(--accent-color);
-    color: #FFFFFF;
-    fill: #FFFFFF;
-    stroke: #FFFFFF;
-    outline: none;
-    cursor: pointer;
+        background: var(--accent-color);
+        border: var(--accent-color);
+        color: #FFFFFF;
+        fill: #FFFFFF;
+        stroke: #FFFFFF;
+        outline: none;
+        cursor: pointer;
     }
 }
 
@@ -180,13 +192,14 @@
     fill: inherit;
     align-items: center;
     justify-content: center;
+
     &:focus,
     &:hover {
-    fill: inherit;
-    stroke: inherit;
+        fill: inherit;
+        stroke: inherit;
 
-    outline: none;
-    cursor: pointer;
+        outline: none;
+        cursor: pointer;
     }
 }
 
@@ -196,14 +209,15 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     min-width: 250px;
-    // min-height: 250px;
     height: 50%;
     border-radius: 10px;
     background-color: #ffffff;
-    padding: 30px;
+    padding: 35px;
     transition: var(--transition);
-    background-color:var(--purple-section-color);
+    background-color: var(--purple-section-color);
     overflow: auto;
+    
+
     @media screen and (min-width: 768px) {
         min-width: 50%;
         min-height: 50%;
@@ -212,7 +226,7 @@
 
     .backdrop .is-hidden & {
         transform: translate(-50%, -50%) scale(0.5);
-      
+
     }
 }
 
@@ -221,12 +235,13 @@
     fill: var(--accent-color);
     background-color: var(--purple-section-color);
     transition: var(--transition);
-&:focus,
-&:hover {
-    fill:var(--button-accent-bg);
-    background-color: var(--accent-color);
-    outline: none;
-    cursor: pointer;
+
+    &:focus,
+    &:hover {
+        fill: var(--button-accent-bg);
+        background-color: var(--accent-color);
+        outline: none;
+        cursor: pointer;
     }
 }
 
@@ -243,12 +258,12 @@
         @include font(500, 14px, 1.76, 00.04em);
         width: 100%;
         max-width: 100%;
-    
-        }
-    
-        @media screen and (min-width: 1200px) {
+
+    }
+
+    @media screen and (min-width: 1200px) {
         @include font(500, 14px, 1.94, 00.04em);
-    
-        }
+
+    }
 
 }
