@@ -1,24 +1,11 @@
-// .slick-list {
-//     overflow: hidden;
-// }
-
-// .slick-track {
-//     display: flex;
-//     align-items: flex-start;
-    
-    
-// }
-
-// .slick-slide {
-//     margin: 0 auto;
-// }
 
 .reviews__item {
     // text-align: center;
     width: 280px;
+    // margin: 0 auto;
 
     @include tablet {
-        max-width: 620px;
+        width: 620px;
     }
     @include desktop {
         width: 968px;
@@ -70,7 +57,16 @@
         }
     }
 }
-
+.reviews {
+    margin: 0 auto;
+    @include tablet {
+        width: 620px;
+    }
+    
+    @include desktop {
+        width: 968px;
+    }
+}
 .reviews__text {
     position: relative;
     @include font (500, 12px, 2.55, 0.02em);
