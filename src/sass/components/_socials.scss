@@ -22,7 +22,7 @@
     transition: var(--transition);
   }
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     width: 34px;
     height: 34px;
     border-radius: 50%;
