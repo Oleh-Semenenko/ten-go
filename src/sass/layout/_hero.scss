@@ -95,11 +95,22 @@
 .hero__link--about {
     display: inline-block;
     @include btn-white;
+    &:hover,
+    &:focus {
+        background-color: var(--button-accent-bg);
+        color: var(--accent-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        }
 }
 
 .hero__link--products {
     @include btn-purp;
     margin-right: 8px;
+    transform: scale(1);
+    &:hover,
+    &:focus {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        transform: scale(1.11);}
     @media screen and (min-width: 1200px) {
     margin-right: 12px;
     }

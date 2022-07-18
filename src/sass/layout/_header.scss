@@ -51,6 +51,12 @@
         font-weight: 700;
         font-size: 16px;
         line-height: 1.31;
+        &:hover,
+        &:focus {
+            background-color: var(--button-accent-bg);
+            color: var(--accent-color);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        }
 
         .btn__icon {
             margin-left: 12px;
@@ -59,7 +65,7 @@
 }
 
 .mob-menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     z-index: 5;
@@ -70,6 +76,7 @@
     padding-bottom: 20px;
 
     @media screen and (min-width: 768px) {
+        position: fixed;
         width: 33vw;
         height: 100vh;
         box-shadow: -9px 0px 37px -7px rgba(0, 0, 0, 0.75);
@@ -100,6 +107,12 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 1.31;
+    &:hover,
+    &:focus {
+        background-color: var(--button-accent-bg);
+        color: var(--accent-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
 }
 
 .btn__icon {
