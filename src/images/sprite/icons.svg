@@ -69,6 +69,9 @@
 <symbol id="icon-close-1" viewBox="0 0 32 32">
 <path fill="none" stroke="#fff" style="stroke: var(--color2, #fff)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2" d="M2.52 2l26.96 28M2 29.48l28-26.96"></path>
 </symbol>
+<symbol id="icon-loon-icon" viewBox="0 0 32 32">
+<path d="M8.005 19.324l1.305 1.305 6.69-6.69 6.69 6.69 1.305-1.305-7.995-7.952z"></path>
+</symbol>
 	</defs>
 </svg>
 
