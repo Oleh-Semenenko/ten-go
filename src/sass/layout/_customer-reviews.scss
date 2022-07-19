@@ -1,3 +1,12 @@
+.customer-reviews {
+    @include tablet {
+        padding-bottom: 40px;
+    }
+    @include desktop {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
 .reviews {
     margin: 0 auto;
     width: 280;
@@ -25,6 +34,9 @@
 .reviews__img {
     width: 85px;
     height: 85px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: inherit;
     margin: 0 auto 32px;
 
     @include tablet {
@@ -43,11 +55,12 @@
 
     @include tablet {
         padding: 20px 6px 36px;
-        margin: 0 auto 2px;
+        margin-right: auto;
+        margin-left: auto;
     }
     @include desktop {
         padding: 32px 74px 31px 72px;
-        margin: 0 auto 16px;
+        // margin: 0 auto 16px;
     }
     
     &::before {
