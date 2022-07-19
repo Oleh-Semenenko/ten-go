@@ -25,6 +25,13 @@
     '. grid-3 grid-5 . grid-8 . . '
     '. . grid-5 . grid-8 . .'
     '. . grid-5 . . . .';
+
+  @media screen and (min-width: 768px) {
+    gap: 6px;
+  }
+  @media screen and(min-width:1200px) {
+    gap: 8px;
+  }
 }
 
 .gallery__item--1 {
