@@ -9,11 +9,11 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position-y: 585px;
-    @media screen and (min-width: 768px) {
+    @include tablet {
     background-image: none;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
     background-image: url(../images/gallery/web/about-bg.png);
     background-repeat: no-repeat;
     background-position: bottom;
