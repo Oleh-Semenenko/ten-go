@@ -194,13 +194,7 @@
 .btn__franchise-icon {
   stroke: #d41443;
 }
-
-@media screen and(min-width:768px) {
-  .conteiner__tablet--contacts {
-    padding-right: 16px;
-    padding-left: 16px;
-  }
-
+@include tablet {
   .contacts-list {
     margin-bottom: 60px;
 
@@ -275,11 +269,9 @@
     height: 44px;
   }
 }
-@media screen and(min-width:1200px) {
+@include desktop {
   // Звернути увагу на падінги контейнера
-  .conteiner__tablet--contacts {
-    max-width: 1200px;
-  }
+
   .contacts-list__item {
     padding: 40px;
   }
@@ -352,16 +344,16 @@
   .backdrop__map.is-hidden & {
     transform: translate(-50%, -50%) scale(0.5);
   }
-  @media screen and (min-width: 480px) {
+  @include mobile {
     max-width: 450px;
     width: 100%;
   }
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     min-width: 700px;
   }
 
-  @media screen and (min-width: 1080px) {
+  @include desktop {
     min-width: 1000px;
     min-height: 600px;
   }
@@ -460,7 +452,7 @@ iframe {
   &:hover,
   &:focus {
     background-color: #e1e1e1;
-    color: #d41443;
+    color: var(--purp-button-bg);
   }
 }
 
