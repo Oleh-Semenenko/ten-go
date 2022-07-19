@@ -4,18 +4,14 @@
     width: 100%;
     &>.container {
         @include flex-centred (flex, center, space-between);
-    
-    @media screen and (min-width: 360px) {
-            padding-top: 8px;
-            padding-bottom: 8px;
-    }
+        padding-top: 8px;
+        padding-bottom: 8px;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
         padding-top: 32px;
         padding-bottom: 0;
     }
-    @media screen and (min-width: 1200px) {
-        max-width: 1200px;
+    @include desktop {
         padding-top: 37px;
         }
     }
@@ -40,7 +36,7 @@
 .header__btn {
     display: none;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
         display: block;
         margin-left: 32px;
         border: none;
@@ -48,116 +44,36 @@
         border-radius: 22px;
         border: none;
         @include btn-white;
+        fill: var(--accent-color);
+        stroke: var(--accent-color);
         font-weight: 700;
         font-size: 16px;
         line-height: 1.31;
+        transform: translate(0) scale(1);
+        transition: background-color var(--transition), box-shadow var(--transition), transform var(--transition);
         &:hover,
         &:focus {
-            background-color: var(--button-accent-bg);
+            background-color: var(--white-button-accent-bg);
             color: var(--accent-color);
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+            transform: scale(1.11);
         }
 
         .btn__icon {
+            width: 8px;
+            height: 10px;
             margin-left: 12px;
+            stroke: inherit;
+            fill: inherit;
+            align-items: center;
+            justify-content: center;
         }
     }
-}
-
-.mob-menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 5;
-    background-color: var(--mob-menu-bg);
-    width: 100vw;
-    height: 100vh;
-    padding-top: 63px;
-    padding-bottom: 20px;
-
-    @media screen and (min-width: 768px) {
-        position: fixed;
-        width: 33vw;
-        height: 100vh;
-        box-shadow: -9px 0px 37px -7px rgba(0, 0, 0, 0.75);
-    }
-}
-
-.menu-close__btn {
-    position: absolute;
-    top: 26px;
-    right: 20px;
-    display: block;
-    margin-left: auto;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    margin-bottom: 26px;
-}
-
-.mob-menu__btn {
-    display: block;
-    margin: 0 auto;
-    padding: 12px 47px 12px 61px;
-    border-radius: 22px;
-    border: none;
-    margin-bottom: 26px;
-
-    @include btn-white;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.31;
-    &:hover,
-    &:focus {
-        background-color: var(--button-accent-bg);
-        color: var(--accent-color);
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    }
-}
-
-.btn__icon {
-    margin-left: 27px;
-    stroke: var(--accent-color);
-    width: 8px;
-    height: 10px;
-        
-    align-items: center;
-    justify-content: center;
-}
-
-.mob-btn__icon {
-    margin-left: 27px;
-    stroke: var(--accent-color);
-    fill: var(--accent-color);
-    width: 8px;
-    height: 10px;
-        
-    align-items: center;
-    justify-content: center;
-}
-
-.mob-menu__link {
-    color: var(--white-section-color);
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.29;
-}
-
-.current {
-    color: var(--accent-color);
-}
-
-.mob-menu__item {
-    padding-top: 11px;
-    padding-bottom: 12px;
-    padding-left: 20px;
-    border-top: 1px solid #E18298;
-    border-bottom: 1px solid #E18298;
 }
 
 .nav__list {
     display: none;
-    @media screen and (min-width: 1200px) {
+    @include desktop {
         display: flex;
     }
 }
@@ -170,9 +86,9 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 1.31;
-     color: var(--white-section-color);
-     padding-top: 15px;
-     padding-bottom: 15px;
+    color: var(--white-section-color);
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .current-link {
@@ -183,8 +99,40 @@
 }
 
 .menu-open__btn {
-    @media screen and (min-width:1200px) {
+    @include desktop {
         display: none;
     }
 }
 
+.header__modal {
+    width: 500px;
+    height: 500px;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: var(--socials-bg-color);
+}
+
+.modal__img {
+    position:absolute;
+    top: -53px;
+    left: 0;
+    width: 500px;
+    height: auto;
+}
+
+.modal__title {
+    margin-top: 30px;
+font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.13;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
