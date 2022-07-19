@@ -58,6 +58,25 @@
       referrerpolicy="no-referrer"
     ></script>
     <script>
+      $(function () {
+        $('.scrollup').click(function () {
+          $("html, body").animate({
+            scrollTop: 0
+          }, 1000);
+        })
+      })
+
+      $(window).scroll(function () {
+        // если пользователь прокрутил страницу более чем на 200px
+        if ($(this).scrollTop() > 200) {
+          $('.scrollup').fadeIn();
+        }
+        else {
+          $('.scrollup').fadeOut();
+        }
+      });
+    </script>
+    <script>
       $('.reviews__list').slick({
         dots: true,
         infinite: true,
