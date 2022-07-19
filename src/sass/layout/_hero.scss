@@ -92,13 +92,17 @@
 }
 
 .hero__link--about {
+    transform: translate(0) scale(1);
     display: inline-block;
     @include btn-white;
+    transition: background-color var(--transition), box-shadow var(--transition),
+    transform var(--transition);
     &:hover,
     &:focus {
-        background-color: var(--button-accent-bg);
+        background-color: var(--white-button-accent-bg);
         color: var(--accent-color);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        transform: scale(1.11);
         }
 }
 
@@ -106,6 +110,7 @@
     @include btn-purp;
     margin-right: 8px;
     transform: scale(1);
+    transition: transform var(--transition);
     &:hover,
     &:focus {
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -201,6 +206,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color var(--transition), box-shadow var(--transition),
+    transform var(--transition);
+    &:hover,
+    &:focus {
+        background-color: var(--white-button-accent-bg);
+        color: var(--accent-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        transform: scale(1.11);
+    }
     @include desktop {
     width: 26px;
     height: 26px;
