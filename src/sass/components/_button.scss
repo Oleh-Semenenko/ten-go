@@ -1,12 +1,35 @@
 .button {
+  transform: translate(0) scale(1);
   @include flex-centred();
+  border: none;
 
-  transition: background-color var(--transition), box-shadow var(--transition);
+  transition: background-color var(--transition), box-shadow var(--transition),
+    transform var(--transition);
 
-  &:hover,
-  &:focus {
-    background-color: var(--button-accent-bg);
+  &--white {
     color: var(--accent-color);
+    background-color: var(--white-button-bg);
+  }
+
+  &--purp {
+    color: var(--white-text-color);
+    background-color: var(--purp-button-bg);
+  }
+
+  &--white:hover,
+  &--white:focus {
+    transform: translate(0) scale(1.11);
+
+    background-color: var(--white-button-accent-bg);
+    color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  &--purp:hover,
+  &--purp:focus {
+    transform: translate(0) scale(1.11);
+
+    background-color: var(--purp-button-accent-bg);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   }
 }

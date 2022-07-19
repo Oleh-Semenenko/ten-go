@@ -1,17 +1,28 @@
 .primary-title {
   font-family: 'Titan One';
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 0.965;
+  @include font(400, 48px, 0.965, 00.04em);
   text-transform: uppercase;
+
+  @include tablet {
+    @include font(null, 22px, 1.1363, null);
+  }
+
+  @include desktop {
+    @include font(null, 58px, 0.9051, null);
+  }
 }
 
 .secondary-title {
   font-family: 'Titan One';
-  font-weight: 400;
-  font-size: 34px;
-  line-height: 1.147;
+  @include font(400, 34px, 1.147, 00.04em);
   text-align: center;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
+
+  @include tablet {
+    @include font(null, 48px, 1.1458, null);
+  }
+
+  @include desktop {
+    @include font(null, 58px, 1.1465, null);
+  }
 }

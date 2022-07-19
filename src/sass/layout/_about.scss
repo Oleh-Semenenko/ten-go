@@ -3,8 +3,24 @@
 }
 
 .about {
-    background: var(--purple-section-color);   
+    background: var(--purple-section-color);
     padding-bottom: 0px;
+    background-image: url(../images/gallery/mobile/about-bg-mob.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 585px;
+    @media screen and (min-width: 768px) {
+    background-image: none;
+    }
+
+    @media screen and (min-width: 1200px) {
+    background-image: url(../images/gallery/web/about-bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    @include retina {
+    background-image: url(../images/gallery/web/about-bg-2x.png);
+    }
+    }
 }
 
 .about__coa__img {
@@ -12,6 +28,10 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 40px;
+
+    @include desktop {
+    margin-bottom: 20px;
+    }
 }
 
 .about__lable {
@@ -22,6 +42,14 @@
     color: var(--title-top-text-color);
     margin-top: auto;
     margin-bottom: 15px;
+
+    @include tablet {
+        @include font(400, 26px, 1.15, mull);
+    }
+
+    @include desktop {
+        @include font(400, 30px, 1.13, 00.04em);
+    }
 }
 
 .about__title {
@@ -32,38 +60,95 @@
     margin-top: auto;
     color: var(--title-color);
     margin-bottom: 32px;
+
+    @include tablet {
+        @include font(400, 48px, 1.15, 00.04em);
+    }
+
+    @include desktop {
+        @include font(400, 58px, 1.14, 00.06em);
+    }
 }
 
-.about__milk__img {
-    margin-top: -25%;
-    width: 100%;
-    margin-bottom: -35%;
-    display: inline;
+.about__group {
+    @include tablet {
+        display: flex;
+
+    }
+
 }
+
+.about__images {
+    
+    width: 100%;
+    margin-right: 32px;
+    justify-content: center;
+
+    @include desktop {
+       
+    margin-right: 100px;
+    }
+}
+
+.about__text {
+    margin-right: auto;
+    width: 100%;
+    
+
+    @include desktop {
+    max-width: 100%;
+
+    }
+}
+
 
 .about__data {
     font-family: 'DM Sans';
     @include font(500, 12px, 1.62, null);
     color: var(--primary-text-color);
     margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 80px;
-    max-width: 220px;
+    margin-bottom: 40px;
+
     position: relative;
-    z-index: 2;
+
+    @include tablet {
+        @include font(500, 14px, 1.76, null);
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0px;
+    
+    }
+
+    @include desktop {
+        @include font(500, 16px, 1.76, 00.04em);
+        margin-top: 90px;
+        margin-bottom: 32px;
+    }
 }
 
 
 .about__details {
     font-family: 'DM Sans';
     @include font(500, 12px, 1.62, null);
-    color:var(--secondary-text-color);
+    color: var(--secondary-text-color);
     margin-top: auto;
     margin-bottom: 20px;
-    margin-right: 80px;
-    max-width: 220px;
+
     position: relative;
-    z-index: 2;
+
+    @include tablet {
+        @include font(500, 14px, 1.76, 00.04em);
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0px;
+        margin-bottom: 40px
+    }
+
+    @include desktop {
+        @include font(500, 14px, 1.94, 00.04em);
+        
+
+    }
 }
 
 .about__read {
@@ -79,16 +164,165 @@
     @include font(700, 14px, 1.3, null);
     align-items: center;
     text-align: center;
-    color:var(--accent-color);
+    color: var(--accent-color);
     fill: var(--accent-color);
+    stroke: var(--accent-color);
+    transition: var(--transition);
+    &:hover,
+    &:focus {
+        transform: translate(0) scale(1.11);    
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        background: var(--accent-color);
+        border: var(--accent-color);
+        color: #FFFFFF;
+        fill: #FFFFFF;
+        stroke: #FFFFFF;
+        outline: none;
+        cursor: pointer;
+    }
 }
 
 .about__icon {
-    stroke:var(--accent-color);
     width: 8px;
     height: 10px;
     margin-left: 8px;
-    
+    stroke: inherit;
+    fill: inherit;
     align-items: center;
     justify-content: center;
+
+    &:focus,
+    &:hover {
+        fill: inherit;
+        stroke: inherit;
+
+        outline: none;
+        cursor: pointer;
+    }
+}
+
+.about__modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    min-width: 250px;
+    height: 50%;
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 35px;
+    transition: var(--transition);
+    background-color: var(--purple-section-color);
+    overflow: auto;
+    
+
+    @include tablet {
+        min-width: 50%;
+        min-height: 50%;
+    }
+
+
+    .backdrop .is-hidden & {
+        transform: translate(-50%, -50%) scale(0.5);
+
+    }
+}
+
+.close {
+    border: 1px solid var(--accent-color);
+    fill: var(--accent-color);
+    background-color: var(--purple-section-color);
+    transition: var(--transition);
+
+    &:focus,
+    &:hover {
+        fill: var(--white-button-bg);
+        background-color: var(--accent-color);
+        outline: none;
+        cursor: pointer;
+    }
+}
+
+.about__more__lable {
+    font-family: 'Titan One';
+    @include font(400, 12px, 1.17, mull);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--title-color);
+    margin-top: auto;
+    margin-bottom: 15px;
+    
+    @include tablet {
+        @include font(400, 14px, 1.15, mull);
+    }
+    
+    @include desktop {
+        @include font(400, 16px, 1.13, 00.04em);
+    }
+}
+
+.about__more {
+    font-family: 'DM Sans';
+    @include font(500, 12px, 1.62, null);
+    color: var(--primary-text-color);
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+    text-align: justify;
+   
+    @include tablet {
+        @include font(500, 14px, 1.76, 00.04em);
+        width: 100%;
+        max-width: 100%;
+
+    }
+
+    @include desktop {
+        @include font(500, 14px, 1.94, 00.04em);
+
+    }
+
+}
+
+.scrollup {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: block;
+    text-align: center;
+    font-size: 1.375em;
+    background-color: var(--accent-color);
+    fill: var(--white-button-accent-bg);
+    stroke: var(--white-button-accent-bg);
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    position: fixed;
+    opacity: 50%;
+    padding: 2px;
+    margin: 10px;
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+        opacity: 100%;
+    }
+
+    @include tablet {
+        width: 50px;
+        height: 50px;
+    }
+
+}
+
+.btn__up {
+    width: 100%;
+    background-color: inherit;
+    fill: #FFFFFF;
+    stroke: #FFFFFF;
+
+    @include tablet {
+        margin-top: 10px;
+    }
+
 }

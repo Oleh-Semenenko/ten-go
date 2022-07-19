@@ -1,0 +1,11 @@
+.backdrop {
+  z-index: 5;
+  @include position($pos: fixed, $t: 0, $l: 0);
+  overflow-y: scroll;
+
+  width: 100%;
+  height: 100%;
+  background: url(../images/backdrop/backdrop30.png), rgba(255, 255, 255, 0.7);
+
+  transition: visibility var(--transition), opacity var(--transition);
+}
