@@ -190,6 +190,11 @@
   stroke: #d41443;
 }
 @include tablet {
+  .contacts {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
   .contacts-list {
     margin-bottom: 60px;
 
@@ -267,6 +272,10 @@
 
 @include desktop {
   // Звернути увагу на падінги контейнера
+  .contacts {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 
   .contacts-list__item {
     padding: 40px;
