@@ -46,6 +46,7 @@
     padding: 12px 37px;
     border-radius: 22px;
     border: none;
+    transition: transform var(--transition);
     @include btn-white;
     font-weight: 700;
     font-size: 16px;

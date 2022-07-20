@@ -9,11 +9,13 @@
   &--white {
     color: var(--accent-color);
     background-color: var(--white-button-bg);
+    transition: transform var(--transition);
   }
 
   &--purp {
     color: var(--white-text-color);
     background-color: var(--purp-button-bg);
+    transition: transform var(--transition);
   }
 
   &--white:hover,
