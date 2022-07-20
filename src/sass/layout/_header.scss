@@ -4,7 +4,6 @@
   width: 100%;
   & > .container {
     @include flex-centred(flex, center, space-between);
-
     @media screen and (min-width: 360px) {
       padding-top: 8px;
       padding-bottom: 8px;
