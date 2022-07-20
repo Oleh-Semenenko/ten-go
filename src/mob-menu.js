@@ -3,6 +3,7 @@
 const menuOpenButton = document.querySelector('.menu-open__btn');
 const mobileMenuBackdrop = document.querySelector('.mob-menu__backdrop');
 const menuCloseButton = document.querySelector('.mobile-menu__close-button');
+const menuSubButton = document.querySelector('.mobile-menu__button');
   
 if (menuOpenButton) {
   menuOpenButton.addEventListener("click", function (e) {
@@ -14,8 +15,14 @@ if (menuOpenButton) {
   menuCloseButton.addEventListener("click", function (e) {
     document.body.classList.remove('menu-open');
     menuOpenButton.classList.remove('active');
-    mobileMenuBackdrop.classList.remove('active');
+    mobileMenuBackdrop.classList.remove('active'); 
   });
+
+  menuSubButton.addEventListener("click", function (e) {
+    document.body.classList.remove('menu-open');
+    menuOpenButton.classList.remove('active');
+    mobileMenuBackdrop.classList.remove('active');
+  }); 
 
 }
 

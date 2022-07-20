@@ -53,8 +53,9 @@
 .modal__title {
   margin-bottom: 30px;
 
-  font-weight: 700;
-  letter-spacing: 0.03em;
+  font-family: 'Titan One';
+  @include font(400, 26px, 1.1538, 0.04em);
+  text-transform: uppercase;
 
   &--black {
     color: var(--title-color);
@@ -168,6 +169,8 @@
   @include position($t: 9px, $l: 12px);
   transition: fill var(--transition);
 
+  fill: rgba(212, 20, 68, 0.3);
+
   .modal__input:focus ~ & {
     fill: var(--accent-color);
   }
@@ -237,7 +240,7 @@
   width: 16px;
   height: 15px;
   margin-right: 9px;
-  border: 2px solid #212121;
+  border: 2px solid rgba(212, 20, 68, 0.2);
 
   border-radius: 2px;
   background-color: transparent;
@@ -263,4 +266,53 @@
 
 .modal__subscription {
   margin: 0 auto;
+}
+
+.subscription__button {
+  margin: 0 auto;
+  padding: 12px 35px;
+  border-radius: 22px;
+}
+
+.modal-menu__button-icon {
+  margin-left: 16px;
+
+  fill: #ffffff;
+}
+
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(212, 20, 68, 0.1);
+
+  border-radius: 50%;
+
+  background-color: transparent;
+
+  transition: border var(--transition);
+
+  &:hover,
+  &:focus {
+    border: 1px solid rgba(212, 20, 68, 0.2);
+  }
+}
+
+.close-button__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  fill: rgba(212, 20, 68, 0.3);
+
+  transition: fill var(--transition);
+
+  .close-button:hover &,
+  .close-button:focus & {
+    fill: var(--accent-color);
+  }
 }

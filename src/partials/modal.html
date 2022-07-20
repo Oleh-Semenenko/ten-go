@@ -1,0 +1,157 @@
+<!-- MODAL -->
+<div class="backdrop is-hidden" data-modal-sub>
+  <div class="modal">
+    <b class="modal__title modal__title--black"
+      >LEAVE YOUR DETAILS, WE WILL CALL YOU BACK</b
+    >
+
+    <form class="modal__form">
+      <button
+        class="close-button"
+        type="button"
+        aria-label="Переключатель меню подписки"
+        data-modal-sub-close
+      >
+        <svg class="close-button__icon" width="18" height="18">
+          <use href="./images/sprite/icons.svg#icon-close-button"></use>
+        </svg>
+      </button>
+
+      <div class="modal_form-field">
+        <input
+          class="modal__input user"
+          type="text"
+          name="user-name"
+          id="user-name"
+          placeholder="Имя"
+          data-placeholder="Name"
+        />
+
+        <label class="modal__label is-hidden" for="user-name">Your name</label>
+
+        <svg class="modal__icon" width="18" height="18">
+          <use href="./images/sprite/icons.svg#icon-person"></use>
+        </svg>
+      </div>
+
+      <div class="modal_form-field">
+        <input
+          class="modal__input tel"
+          type="tel"
+          name="tel"
+          id="user-tel"
+          placeholder="Телефон"
+          data-placeholder="Your telephone"
+        />
+
+        <label class="modal__label is-hidden" for="user-tel"
+          >+61(0)***-***-***</label
+        >
+
+        <svg class="modal__icon" width="18" height="18">
+          <use href="./images/sprite/icons.svg#icon-phone"></use>
+        </svg>
+      </div>
+
+      <div class="modal_form-field">
+        <input
+          class="modal__input email"
+          type="email"
+          name="mail"
+          id="user-mail"
+          pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
+          placeholder="Почта"
+          data-placeholder="Email"
+        />
+
+        <label class="modal__label is-hidden" for="user-mail"
+          ><span lang="en">your@mail.com</span></label
+        >
+
+        <svg class="modal__icon" width="18" height="18">
+          <use href="./images/sprite/icons.svg#icon-email"></use>
+        </svg>
+      </div>
+
+      <div class="modal__textarea-container">
+        <textarea
+          class="modal__textarea"
+          name="user-comment"
+          id="user-comment"
+          placeholder="Введите текст"
+          data-placeholder="Enter text"
+        ></textarea>
+
+        <label class="modal__label is-hidden" for="user-comment"
+          >Your comment</label
+        >
+      </div>
+
+      <div class="modal__checkbox-container">
+        <label class="checkbox checkbox__label" for="accept">
+          <input
+            class="checkbox__input visually-hidden"
+            type="checkbox"
+            name="accept"
+            id="accept"
+          />
+
+          <svg class="checkbox__icon" width="16" height="15">
+            <use href="./images/sprite/icons.svg#icon-checkbox"></use>
+          </svg>
+
+          I agree with the newsletter and accept
+          <a class="checkbox__link" href="">Terms of an agreement</a>
+        </label>
+      </div>
+
+      <button class="subscription__button button button--purp" type="submit">
+        Submit
+        <svg class="modal-menu__button-icon" width="18" height="22.5">
+          <use href="./images/sprite/icons.svg#icon-buy-now"></use>
+        </svg>
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- modal-placeholder -->
+<script>
+  document.querySelector('.user').addEventListener('focusout', e => {
+    e.currentTarget.placeholder = e.currentTarget.dataset.placeholder;
+  });
+
+  document.querySelector('.user').addEventListener('focusin', e => {
+    e.currentTarget.placeholder = ' ';
+  });
+</script>
+
+<script>
+  document.querySelector('.tel').addEventListener('focusout', e => {
+    e.currentTarget.placeholder = e.currentTarget.dataset.placeholder;
+  });
+
+  document.querySelector('.tel').addEventListener('focusin', e => {
+    e.currentTarget.placeholder = ' ';
+  });
+</script>
+
+<script>
+  document.querySelector('.email').addEventListener('focusout', e => {
+    e.currentTarget.placeholder = e.currentTarget.dataset.placeholder;
+  });
+
+  document.querySelector('.email').addEventListener('focusin', e => {
+    e.currentTarget.placeholder = ' ';
+  });
+</script>
+
+<script>
+  document.querySelector('.modal__textarea').addEventListener('focusout', e => {
+    e.currentTarget.placeholder = e.currentTarget.dataset.placeholder;
+  });
+
+  document.querySelector('.modal__textarea').addEventListener('focusin', e => {
+    e.currentTarget.placeholder = ' ';
+  });
+</script>
