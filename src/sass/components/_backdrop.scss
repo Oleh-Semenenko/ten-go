@@ -9,3 +9,35 @@
 
   transition: visibility var(--transition), opacity var(--transition);
 }
+
+.mob-menu__backdrop {
+  z-index: 5;
+  @include position($pos: fixed, $t: 0, $l: 0);
+  overflow-y: scroll;
+
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+
+  width: 100%;
+  height: 100%;
+  background: url(../images/backdrop/backdrop30.png), rgba(255, 255, 255, 0.7);
+
+  transition: visibility var(--transition), opacity var(--transition);
+}
+
+.mob-menu__backdrop.active {
+  z-index: 5;
+  @include position($pos: fixed, $t: 0, $l: 0);
+  overflow-y: scroll;
+
+  visibility: visible;
+  opacity: 1;
+  pointer-events: all;
+
+  width: 100%;
+  height: 100%;
+  background: url(../images/backdrop/backdrop30.png), rgba(255, 255, 255, 0.7);
+
+  transition: visibility var(--transition), opacity var(--transition);
+}

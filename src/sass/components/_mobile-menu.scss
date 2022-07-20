@@ -1,7 +1,7 @@
 .mobile-menu {
   position: absolute;
   top: 0;
-  right: 0;
+  right: -35%;
   transform-origin: top right;
 
   width: 250px;
@@ -10,35 +10,64 @@
 
   background-color: #e17992;
   box-shadow: -8px 0px 20px rgba(0, 0, 0, 0.25);
+
+  transition: right var(--transition) 100ms;
+
+  .mob-menu__backdrop.active & {
+    right: 0;
+  }
+
+  @include tablet {
+    width: 254px;
+  }
 }
 
 .button-container {
   @include flex-centred();
   padding: 0 20px;
+
+  @include tablet {
+    padding: 0 32px;
+  }
 }
 
 .mobile-menu__close-button {
   position: absolute;
   top: 20;
   right: 20;
+
+  padding: 0;
   border: none;
 
   background-color: transparent;
+
+  @include tablet {
+    right: 32px;
+  }
 }
 
 .menu-close__icon {
-  fill: var(--accent-color);
+  fill: #ffffff;
+
+  transition: fill var(--transition);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
 }
 
 .mobile-menu__button {
   width: 100%;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 11px;
+  padding-bottom: 11px;
   border-radius: 22px;
 }
 
 .mobile-menu__button-icon {
   margin-left: 16px;
+
+  fill: var(--accent-color);
 }
 
 .mobile-menu__list {
@@ -47,17 +76,6 @@
 
 .mobile-menu__item {
   padding: 12px 20px;
-
-  @include font(700, 14px, 1.2857, null);
-
-  color: var(--white-text-color);
-
-  transition: color var(--transition);
-
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
-  }
 
   &:first-child {
     border-top: 1px solid #e18298;
@@ -70,4 +88,22 @@
   .mobile-menu__item + & {
     border-top: 1px solid #e18298;
   }
+}
+
+.mobile-menu__link {
+  @include font(700, 14px, 1.2857, null);
+
+  color: var(--white-text-color);
+
+  transition: color var(--transition);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+// МОБИЛЬНОЕ МЕНЮ ОТКРЫТО, БОДИ НЕ СКРОЛИТСЯ
+.menu-open {
+  overflow: hidden;
 }
