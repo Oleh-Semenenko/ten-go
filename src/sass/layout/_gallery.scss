@@ -1,9 +1,25 @@
+.gallery .container {
+  padding: 0;
+  width: max-content; 
+}
+
 .gallery {
+  padding-bottom: 60px;
   background: linear-gradient(
     to bottom,
-    var(--purple-section-color) 16.5%,
-    var(--white-section-color) 16.5%
+    var(--purple-section-color) 10.5%,
+    var(--white-section-color) 10.5%
   );
+  @include tablet {
+    background: linear-gradient(to bottom,
+          var(--purple-section-color) 45.5%,
+          var(--white-section-color) 45.5%);
+  }
+  @include desktop {
+    background: linear-gradient(to bottom,
+        var(--purple-section-color) 15.5%,
+        var(--white-section-color) 15.5%);
+  }
 }
 
 .gallery__list {
@@ -25,6 +41,13 @@
     '. grid-3 grid-5 . grid-8 . . '
     '. . grid-5 . grid-8 . .'
     '. . grid-5 . . . .';
+
+  @media screen and (min-width: 768px) {
+    gap: 6px;
+  }
+  @media screen and(min-width:1200px) {
+    gap: 8px;
+  }
 }
 
 .gallery__item--1 {
@@ -61,6 +84,3 @@
   grid-area: grid-10;
 }
 
-.gallery .container {
-  padding: 0;
-}

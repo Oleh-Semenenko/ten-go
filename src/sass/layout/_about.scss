@@ -3,20 +3,24 @@
 }
 
 .about {
+    padding-top: 60px;
     background: var(--purple-section-color);
     padding-bottom: 0px;
-    background-image: url(../images/gallery/web/about-bg.png);
+    background-image: url(../images/gallery/mobile/about-bg-mob.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position-y: 585px;
-    @media screen and (min-width: 768px) {
+    @include tablet {
     background-image: none;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
     background-image: url(../images/gallery/web/about-bg.png);
     background-repeat: no-repeat;
     background-position: bottom;
+    @include retina {
+    background-image: url(../images/gallery/web/about-bg-2x.png);
+    }
     }
 }
 
@@ -26,7 +30,7 @@
     justify-content: center;
     margin-bottom: 40px;
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
     margin-bottom: 20px;
     }
 }
@@ -40,11 +44,11 @@
     margin-top: auto;
     margin-bottom: 15px;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
         @include font(400, 26px, 1.15, mull);
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
         @include font(400, 30px, 1.13, 00.04em);
     }
 }
@@ -58,20 +62,19 @@
     color: var(--title-color);
     margin-bottom: 32px;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
         @include font(400, 48px, 1.15, 00.04em);
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
         @include font(400, 58px, 1.14, 00.06em);
     }
 }
 
 .about__group {
-    @media screen and (min-width: 768px) {
+    @include tablet {
         display: flex;
-        // margin-left: 32px;
-        // margin-right: 32px;
+
     }
 
 }
@@ -82,9 +85,9 @@
     margin-right: 32px;
     justify-content: center;
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
        
-        margin-right: 100px;
+    margin-right: 100px;
     }
 }
 
@@ -93,8 +96,8 @@
     width: 100%;
     
 
-    @media screen and (min-width: 1200px) {
-        max-width: 100%;
+    @include desktop {
+    max-width: 100%;
 
     }
 }
@@ -109,17 +112,18 @@
 
     position: relative;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
         @include font(500, 14px, 1.76, null);
         width: 100%;
         max-width: 100%;
         margin-right: 0px;
-        margin-bottom: 40px;
+    
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
         @include font(500, 16px, 1.76, 00.04em);
         margin-top: 90px;
+        margin-bottom: 32px;
     }
 }
 
@@ -133,16 +137,17 @@
 
     position: relative;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
         @include font(500, 14px, 1.76, 00.04em);
         width: 100%;
         max-width: 100%;
         margin-right: 0px;
+        margin-bottom: 40px
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
         @include font(500, 14px, 1.94, 00.04em);
-        margin-bottom: 40px;
+        
 
     }
 }
@@ -164,9 +169,10 @@
     fill: var(--accent-color);
     stroke: var(--accent-color);
     transition: var(--transition);
-
     &:hover,
     &:focus {
+        transform: translate(0) scale(1.11);    
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         background: var(--accent-color);
         border: var(--accent-color);
         color: #FFFFFF;
@@ -211,7 +217,7 @@
     overflow: auto;
     
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
         min-width: 50%;
         min-height: 50%;
     }
@@ -231,10 +237,28 @@
 
     &:focus,
     &:hover {
-        fill: var(--button-accent-bg);
+        fill: var(--white-button-bg);
         background-color: var(--accent-color);
         outline: none;
         cursor: pointer;
+    }
+}
+
+.about__more__lable {
+    font-family: 'Titan One';
+    @include font(400, 12px, 1.17, mull);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--title-color);
+    margin-top: auto;
+    margin-bottom: 15px;
+    
+    @include tablet {
+        @include font(400, 14px, 1.15, mull);
+    }
+    
+    @include desktop {
+        @include font(400, 16px, 1.13, 00.04em);
     }
 }
 
@@ -247,16 +271,59 @@
     position: relative;
     text-align: justify;
    
-    @media screen and (min-width: 768px) {
+    @include tablet {
         @include font(500, 14px, 1.76, 00.04em);
         width: 100%;
         max-width: 100%;
 
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
         @include font(500, 14px, 1.94, 00.04em);
 
+    }
+
+}
+
+.scrollup {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: block;
+    text-align: center;
+    font-size: 1.375em;
+    background-color: var(--accent-color);
+    fill: var(--white-button-accent-bg);
+    stroke: var(--white-button-accent-bg);
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    position: fixed;
+    opacity: 50%;
+    padding: 2px;
+    margin: 10px;
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+        opacity: 100%;
+    }
+
+    @include tablet {
+        width: 50px;
+        height: 50px;
+    }
+
+}
+
+.btn__up {
+    width: 100%;
+    background-color: inherit;
+    fill: #FFFFFF;
+    stroke: #FFFFFF;
+
+    @include tablet {
+        margin-top: 10px;
     }
 
 }

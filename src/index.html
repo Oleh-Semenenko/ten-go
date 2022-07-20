@@ -12,6 +12,10 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
       integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
       crossorigin="anonymous"
@@ -58,6 +62,27 @@
       referrerpolicy="no-referrer"
     ></script>
     <script>
+      $(function () {
+        $('.scrollup').click(function () {
+          $('html, body').animate(
+            {
+              scrollTop: 0,
+            },
+            1000
+          );
+        });
+      });
+
+      $(window).scroll(function () {
+        // если пользователь прокрутил страницу более чем на 200px
+        if ($(this).scrollTop() > 200) {
+          $('.scrollup').fadeIn();
+        } else {
+          $('.scrollup').fadeOut();
+        }
+      });
+    </script>
+    <script>
       $('.reviews__list').slick({
         dots: true,
         infinite: true,
@@ -65,6 +90,7 @@
         slidesToShow: 1,
         adaptiveHeight: true,
         arrows: false,
+        fade: true
       });
     </script>
   </body>
