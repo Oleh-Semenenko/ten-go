@@ -52,35 +52,95 @@
 
 .gallery__item--1 {
   grid-area: grid-1;
+  transition-property: transform;
+  &:hover,
+  &:focus {
+  transform: scale(1.5);
+  transition-duration: 250ms;
+}
 }
 .gallery__item--2 {
   grid-area: grid-2;
+  transition-property: transform;
+  &:hover,
+  &:focus {
+    transform: scale(1.5);
+    transition-duration: 250ms;
+  }
 }
 .gallery__item--3 {
   grid-area: grid-3;
+  transition-property: transform;
+  &:hover,
+  &:focus {
+    transform: scale(1.5);
+    transition-duration: 250ms;
+  }
 }
 
 .gallery__item--4 {
   grid-area: grid-4;
+  transition-property: transform;
+  &:hover,
+  &:focus {
+    transform: scale(1.5);
+    transition-duration: 250ms;
+  }
 }
 .gallery__item--5 {
   grid-area: grid-5;
+  transition-property: transform;
+  &:hover,
+  &:focus {
+    transform: scale(1.5);
+    transition-duration: 250ms;
+  }
 }
 .gallery__item--6 {
   grid-area: grid-6;
+  transition-property: transform;
+  &:hover,
+  &:focus {
+    transform: scale(1.5);
+    transition-duration: 250ms;
+  }
 }
 
 .gallery__item--7 {
   grid-area: grid-7;
+  transition-property: transform;
+ &:hover,
+  &:focus {
+    transform: scale(1.5);
+    transition-duration: 250ms;
+  }
 }
 
 .gallery__item--8 {
   grid-area: grid-8;
+  transition-property: transform;
+  &:hover,
+  &:focus {
+    transform: scale(1.5);
+    transition-duration: 250ms;
+  }
 }
 .gallery__item--9 {
   grid-area: grid-9;
+  transition-property: transform;
+  &:hover,
+  &:focus {
+    transform: scale(1.5);
+    transition-duration: 250ms;
+  }
 }
 .gallery__item--10 {
   grid-area: grid-10;
+  transition-property: transform;
+  &:hover,
+  &:focus {
+    transform: scale(1.5);
+    transition-duration: 250ms;
+  }
 }
 

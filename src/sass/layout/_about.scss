@@ -168,7 +168,7 @@
     color: var(--accent-color);
     fill: var(--accent-color);
     stroke: var(--accent-color);
-    transition: var(--transition);
+    transition: transform var(--transition);
     &:hover,
     &:focus {
         transform: translate(0) scale(1.11);    
