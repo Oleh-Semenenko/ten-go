@@ -30,4 +30,5 @@
 }
 .social__icon {
   fill: var(--socials-icon-color);
+  transition: transform var(--transition);
 }
